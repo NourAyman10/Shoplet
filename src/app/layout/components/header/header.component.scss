@@ -1,0 +1,49 @@
+header {
+  padding: 10px var(--main-padding-x);
+  app-logo {
+    cursor: pointer;
+  }
+  .buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__cart {
+      cursor: pointer;
+      &__button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: relative;
+
+        &__number {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: var(--main-color);
+          color: white;
+          transform: translateX(calc(-100% + 10px));
+          min-height: 22px;
+          min-width: 22px;
+          padding: 0 5px;
+          border-radius: 20px;
+        }
+
+        &__icon {
+          height: 22px;
+        }
+      }
+    }
+
+    &__profile {
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      &__icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

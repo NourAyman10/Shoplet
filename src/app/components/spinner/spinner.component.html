@@ -1,0 +1,15 @@
+<div
+  [style.width.px]="size()"
+  [style.height.px]="size()"
+  [style]="
+    light()
+      ? {
+          'background-color': 'var(--main-color)',
+          background: 'linear-gradient(to right, var(--main-color), white 70%)'
+        }
+      : {
+          'background-color': 'white',
+        }
+  "
+  class="border align-center-justify-center"
+></div>

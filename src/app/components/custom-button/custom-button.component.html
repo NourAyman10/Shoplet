@@ -1,1 +1,6 @@
-<p>custom-button works!</p>
+@if (loading()) {
+<app-spinner [light]="primary() ? true : false" />
+}
+<span class="content" [class.content--hide]="loading()">
+  <ng-content></ng-content>
+</span>

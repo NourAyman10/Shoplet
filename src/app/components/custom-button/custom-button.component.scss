@@ -1,0 +1,45 @@
+:host {
+  border: 0;
+  padding: var(--element-padding);
+  border-radius: var(--element-border-radius);
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.2s ease;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  app-spinner {
+    position: absolute;
+  }
+
+  .content {
+    color: inherit;
+    &--hide {
+      visibility: hidden !important;
+    }
+  }
+
+  // Primary variant
+  &[data-variant="primary"] {
+    background-color: var(--main-color);
+    color: white;
+
+    &:hover {
+      background-color: var(--main-color-hover);
+    }
+  }
+
+  // Secondary variant
+  &[data-variant="secondary"] {
+    background-color: white;
+    color: var(--main-color);
+    font-weight: 700;
+
+    &:hover {
+      color: var(--main-color-hover);
+    }
+  }
+}

@@ -1,1 +1,37 @@
-<p>header works!</p>
+<header class="align-center-space-between main-shadow">
+  <app-logo [routerLink]="['/home']" />
+
+  <div class="buttons-container">
+    @if(isLoggedIn()) {
+    <div class="buttons-container__cart" [routerLink]="['/cart']">
+      <div
+        class="buttons-container__cart__button align-center-justify-center main-shadow"
+      >
+        <div
+          class="buttons-container__cart__button__number align-center-justify-center"
+        >
+          2
+        </div>
+        <img
+          class="buttons-container__cart__button__icon"
+          src="assets/icons/cart.svg"
+          alt="cart-icon"
+        />
+      </div>
+    </div>
+    <div
+      class="buttons-container__profile main-shadow"
+      [routerLink]="['/profile']"
+    >
+      <img
+        class="buttons-container__profile__icon"
+        src="assets/icons/profile.svg"
+        alt=""
+      />
+    </div>
+    }@else {
+    <button customButton [primary]="false">Log in</button>
+    <button customButton>Sign up</button>
+    }
+  </div>
+</header>
