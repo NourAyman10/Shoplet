@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { NetworkService } from './services/network.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ import { ToastrService } from 'ngx-toastr';
 export class AppComponent {
   title = 'shoplet';
 
-  constructor(private toastr: ToastrService) {}
+  constructor(private toastr: ToastrService, _network: NetworkService) {}
 
   showToast(): void {
     this.toastr.success('Toastr is working!');
