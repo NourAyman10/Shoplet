@@ -1,0 +1,27 @@
+.border {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(to right, var(--main-color), white 70%);
+  border-radius: 50%;
+  animation: spinning 0.5s linear infinite;
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    background-color: inherit !important;
+    position: absolute;
+    z-index: 2;
+  }
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
