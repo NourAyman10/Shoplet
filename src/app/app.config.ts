@@ -1,10 +1,11 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig, provideZoneChangeDetection, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideToastr } from 'ngx-toastr';
+import { NgxSmartModalModule } from 'ngx-smart-modal';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -12,6 +13,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideClientHydration(),
     provideAnimations(),
+    importProvidersFrom(NgxSmartModalModule.forRoot()),
     provideToastr({
       timeOut: 4000,
       // extendedTimeOut: 0,
