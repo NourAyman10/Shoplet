@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 import { NetworkService } from './services/network.service';
 
 @Component({
@@ -12,11 +11,5 @@ import { NetworkService } from './services/network.service';
 })
 export class AppComponent {
   title = 'shoplet';
-
-  constructor(private toastr: ToastrService, _network: NetworkService) {}
-
-  showToast(): void {
-    this.toastr.success('Toastr is working!');
-    this.toastr.error('Toastr is working!');
-  }
+  _network = inject(NetworkService);
 }
