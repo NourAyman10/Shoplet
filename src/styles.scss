@@ -116,3 +116,9 @@ body * {
 .toast-error .toast-close-button {
   color: #e63032 !important;
 }
+
+// style swiper
+swiper-container {
+  --swiper-navigation-color: var(--main-color); 
+  --swiper-pagination-color: var(--main-color);
+}

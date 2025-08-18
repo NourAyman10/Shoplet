@@ -1,1 +1,24 @@
-<p>home works!</p>
+<section>
+  <section class="swiper">
+    <swiper-container
+      class="swiper__container"
+      slides-per-view="1"
+      autoplay="true"
+      centeredSlides="true"
+      [initialSlide]="1"
+      navigation
+      pagination
+      loop
+    >
+      @for (slide of images(); track $index) {
+      <swiper-slide class="swiper__container__slide">
+        <img
+          class="swiper__container__slide__image"
+          [src]="slide"
+          alt="Image slide-{{$index}}"
+        />
+      </swiper-slide>
+      }
+    </swiper-container>
+  </section>
+</section>
