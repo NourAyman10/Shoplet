@@ -78,6 +78,17 @@ body, body * {
   background-color: #e63032 !important;
 }
 
+.toast-warning {
+  border-radius: 40px !important;
+  border: 1px solid #f0ad4e !important;
+  background-color: #fff5e6 !important;
+  color: #5a411a !important;
+}
+
+.toast-warning .toast-progress {
+  background-color: #f0ad4e !important;
+}
+
 /* Close button styling */
 .toast-container .toast-close-button {
   position: relative;
