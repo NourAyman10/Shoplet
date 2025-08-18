@@ -1,1 +1,101 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "ngx-toastr/toastr";
+
+// global vars
+:root {
+  // colors
+  --main-color: #18B0A4;
+  --main-color-hover: #199e93;
+  --primary-font-color: #262626;
+  --secondary-font-color: #535862;
+  --success-color: #3aa73a;
+  --success-bg-color: #e9ffe9;
+  --error-color: #e63032;
+  --error-bg-color: #ffe7e7;
+
+  // vars
+  --element-padding: 10px 18px;
+  --element-border-radius: 8px;
+  --main-padding-x: 112px;
+}
+
+
+// global styles
+body, body * {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.align-center-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.align-center-justify-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// style toast
+.toast-container {
+  margin-top: 15px !important;
+}
+.toast-container .ngx-toastr {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.toast-container .toast-message {
+  margin-top: 7px;
+}
+
+.toast-success {
+  background-image: url("assets/icons/success.svg");
+  border-radius: 40px !important;
+  border: 1px solid #3aa73a !important;
+  background-color: #e9ffe9 !important;
+  color: #1d3a1d !important;
+}
+
+.toast-error {
+  background-image: url("assets/icons/error.svg");
+  border-radius: 40px !important;
+  border: 1px solid #e63032 !important;
+  background-color: #ffe7e7 !important;
+  color: #5a1a1a !important;
+}
+
+/* Progress bar colors */
+.toast-success .toast-progress {
+  background-color: #3aa73a !important;
+}
+
+.toast-error .toast-progress {
+  background-color: #e63032 !important;
+}
+
+/* Close button styling */
+.toast-container .toast-close-button {
+  position: relative;
+  right: 0px;
+  top: 50%;
+  font-size: 30px !important;
+  font-weight: 400;
+  opacity: 0.5 !important;
+}
+
+.toast-container .toast-close-button:hover {
+  opacity: 1 !important;
+}
+
+.toast-success .toast-close-button {
+  color: #3aa73a !important;
+}
+
+.toast-error .toast-close-button {
+  color: #e63032 !important;
+}
