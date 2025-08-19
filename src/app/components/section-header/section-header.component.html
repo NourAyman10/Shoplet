@@ -1,0 +1,6 @@
+<div class="section-header">
+  <h1><ng-content/></h1>
+  @if(seeAll() !== '') {
+  <a [routerLink]="seeAll()">see all</a>
+  }
+</div>
