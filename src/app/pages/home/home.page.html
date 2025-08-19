@@ -12,11 +12,11 @@
     >
       @for (slide of images(); track $index) {
       <swiper-slide class="swiper__container__slide">
-        <img
-          class="swiper__container__slide__image"
-          [src]="slide"
-          alt="Image slide-{{$index}}"
-        />
+          <app-custom-image
+            [imageSrc]="slide"
+            [altText]="'Image slide-' + $index"
+            class="swiper__container__slide__image"
+          />
       </swiper-slide>
       }
     </swiper-container>
