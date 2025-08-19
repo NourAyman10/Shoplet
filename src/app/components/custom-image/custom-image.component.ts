@@ -1,6 +1,7 @@
 import { Component, input, signal } from '@angular/core';
 import { SpinnerComponent } from '../spinner/spinner.component';
 import { ImageFallbackDirective } from '../../directives/image-fallback.directive';
+import { PLACEHOLDER_IMAGE } from '../../constants/constants';
 
 @Component({
   selector: 'app-custom-image',
@@ -12,8 +13,7 @@ import { ImageFallbackDirective } from '../../directives/image-fallback.directiv
 export class CustomImageComponent {
   imageSrc = input<string>('');
   altText = input<string>('');
-  fallbackImage = input<string>('/assets/image-placeholder.svg');
-
+  fallbackImage = input<string>(PLACEHOLDER_IMAGE);
   isLoading = signal(true);
   hasError = signal(false);
 

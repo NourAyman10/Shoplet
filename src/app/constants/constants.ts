@@ -1,0 +1,1 @@
+export const PLACEHOLDER_IMAGE = 'assets/image-placeholder.svg'

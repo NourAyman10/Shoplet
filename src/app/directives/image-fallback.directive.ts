@@ -6,13 +6,14 @@ import {
   input,
   OnInit,
 } from '@angular/core';
+import { PLACEHOLDER_IMAGE } from '../constants/constants';
 
 @Directive({
   selector: '[appImageFallback]',
   standalone: true,
 })
 export class ImageFallbackDirective implements OnInit {
-  appImageFallback = input('/assets/image-placeholder.svg');
+  appImageFallback = input(PLACEHOLDER_IMAGE);
   private originalSrc: string = '';
 
   constructor(private el: ElementRef<HTMLImageElement>) {}
