@@ -1,0 +1,19 @@
+.section-header {
+  padding: 20px var(--main-padding-x) !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 28px;
+  }
+  a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid var(--main-color);
+    padding: 5px 15px;
+    border-radius: var(--element-border-radius);
+    color: var(--main-color);
+  }
+}

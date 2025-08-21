@@ -1,1 +1,20 @@
-<p>custom-image works!</p>
+<div class="image-container">
+  @if (isLoading()) {
+  <div class="image-container__loading-spinner">
+    <app-spinner [size]="50" />
+  </div>
+  }
+
+  <img
+    class="image-container__image"
+    [appImageFallback]="fallbackImage()"
+    [src]="imageSrc()"
+    (load)="onLoad()"
+    (error)="onError()"
+    [alt]="altText()"
+    [class.image-container__image--loaded]="!isLoading()"
+    [class.image-container__image--hidden]="hasError()"
+    [class.image-container__image--fallback-image]="hasError()"
+  />
+</div>
+

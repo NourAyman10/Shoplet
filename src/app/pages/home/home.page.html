@@ -1,1 +1,59 @@
-<p>home works!</p>
+<section>
+  <section class="swiper">
+    @if(isLoading()) {
+    <div skeleton height="250px" borderRadius="0"></div>
+    }@else {
+    <swiper-container
+      class="swiper__container"
+      slides-per-view="1"
+      autoplay="true"
+      centeredSlides="true"
+      [initialSlide]="1"
+      navigation
+      pagination
+      loop
+    >
+      @for (slide of images(); track $index) {
+      <swiper-slide class="swiper__container__slide">
+        <app-custom-image
+          [imageSrc]="slide"
+          [altText]="'Image slide-' + $index"
+          class="swiper__container__slide__image"
+        />
+      </swiper-slide>
+      }
+    </swiper-container>
+    }
+  </section>
+
+  <section class="categories">
+    <app-section-header seeAll="category/id">Categories</app-section-header>
+    <div class="categories__cards">
+      @if(isLoading()) { @for (category of [].constructor(4); track $index) {
+      <div
+        skeleton
+        [style.margin-left]="$first ? 'var(--main-padding-x)' : null"
+        [style.margin-right]="$last ? 'var(--main-padding-x)' : null"
+        width="145px"
+        height="42px"
+      ></div>
+      } } @else { @for (category of [].constructor(7); track $index) {
+      <a
+        class="categories__cards__card"
+        [style.margin-left]="$first ? 'var(--main-padding-x)' : null"
+        [style.margin-right]="$last ? 'var(--main-padding-x)' : null"
+        [routerLink]="['category/id']"
+      >
+
+      
+        <img
+          class="categories__cards__card__icon"
+          src="assets/icons/error.svg"
+          alt=""
+        />
+        <p class="categories__cards__card__label">category{{$index}}</p>
+      </a>
+      } }
+    </div>
+  </section>
+</section>

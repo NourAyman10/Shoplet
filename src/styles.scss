@@ -62,26 +62,26 @@ body * {
 .toast-success {
   background-image: url("assets/icons/success.svg");
   border-radius: 40px !important;
-  border: 1px solid #3aa73a !important;
-  background-color: #e9ffe9 !important;
+  border: 1px solid var(--success-color) !important;
+  background-color: var(--success-bg-color) !important;
   color: #1d3a1d !important;
 }
 
 .toast-error {
   background-image: url("assets/icons/error.svg");
   border-radius: 40px !important;
-  border: 1px solid #e63032 !important;
-  background-color: #ffe7e7 !important;
+  border: 1px solid var(--error-color) !important;
+  background-color: var(--error-bg-color) !important;
   color: #5a1a1a !important;
 }
 
 /* Progress bar colors */
 .toast-success .toast-progress {
-  background-color: #3aa73a !important;
+  background-color: var(--success-color) !important;
 }
 
 .toast-error .toast-progress {
-  background-color: #e63032 !important;
+  background-color: var(--error-color) !important;
 }
 
 .toast-warning {
@@ -110,9 +110,15 @@ body * {
 }
 
 .toast-success .toast-close-button {
-  color: #3aa73a !important;
+  color: var(--success-color) !important;
 }
 
 .toast-error .toast-close-button {
-  color: #e63032 !important;
+  color: var(--error-color) !important;
+}
+
+// style swiper
+swiper-container {
+  --swiper-navigation-color: var(--main-color); 
+  --swiper-pagination-color: var(--main-color);
 }

@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { NgStyle } from '@angular/common';
+import { Component, input } from '@angular/core';
 
 @Component({
-  selector: 'app-skeleton',
+  selector: '[skeleton]',
   standalone: true,
-  imports: [],
+  imports: [NgStyle],
   templateUrl: './skeleton.component.html',
-  styleUrl: './skeleton.component.scss'
+  styleUrl: './skeleton.component.scss',
 })
 export class SkeletonComponent {
-
+  width = input<string>('100%');
+  height = input<string>('10px');
+  borderRadius = input<string>('8px');
 }
